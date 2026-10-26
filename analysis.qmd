@@ -37,3 +37,41 @@ income_tx |>
   ) +
   theme_void()
 ```
+
+```{r}
+#| message: false
+edu_state <- get_acs(
+  geography = "state",
+  variables = c(
+    total = "B15003_001",
+    bachelors = "B15003_022",
+    masters = "B15003_023",
+    professional = "B15003_024",
+    doctorate = "B15003_025"
+  ),
+  year = 2020,
+  summary_var = "B15003_001"
+)
+```
+
+```{r}
+edu_state |>
+  group_by(GEOID, NAME) |>
+  summarize(
+    pct_bachelors_plus = sum(estimate) / first(summary_est) * 100,
+    .groups = "drop"
+  ) |>
+  ggplot(aes(
+    x = pct_bachelors_plus,
+    y = fct_reorder(NAME, pct_bachelors_plus)
+  )) +
+  geom_col() +
+  scale_x_continuous(labels = \(x) paste0(x, "%")) +
+  labs(
+    title = "Adults with a Bachelor's Degree or Higher by State",
+    x = "Adults with a bachelor's degree or higher",
+    y = NULL,
+    caption = "Source: U.S. Census Bureau, 2020 ACS 5-year estimates."
+  ) +
+  theme_minimal()
+```
