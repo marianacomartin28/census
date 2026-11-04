@@ -1,0 +1,9 @@
+---
+title: "About This Project"
+---
+
+This project examines population growth and economic development using data from the U.S. Census Bureau.
+
+Most of the charts use data from the American Community Survey, which estimates population, income, education, and other characteristics across the United States.
+
+Data source: [U.S. Census Bureau](https://www.census.gov/)

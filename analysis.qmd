@@ -13,101 +13,122 @@ library(tidycensus)
 library(sf)
 ```
 
+## Population growth by state
+
+This chart compares state populations in 2019 and 2023 and calculates the percent change over that period.
+
 ```{r}
 #| message: false
 #| cache: true
-income_tx <- get_acs(
-  geography = "county",
-  variables = "B19013_001",
-  state = "TX",
-  year = 2020,
-  geometry = TRUE
-)
-```
-
-```{r}
-income_tx |>
-  ggplot() +
-  geom_sf(aes(fill = estimate), color = NA) +
-  scale_fill_viridis_c(labels = scales::label_dollar()) +
-  labs(
-    title = "Median Household Income by Texas County",
-    fill = "Median household income",
-    caption = "Source: U.S. Census Bureau, 2020 ACS 5-year estimates."
-  ) +
-  theme_void()
-```
-
-```{r}
-#| message: false
-edu_state <- get_acs(
+population_2019 <- get_acs(
   geography = "state",
-  variables = c(
-    total = "B15003_001",
-    bachelors = "B15003_022",
-    masters = "B15003_023",
-    professional = "B15003_024",
-    doctorate = "B15003_025"
-  ),
-  year = 2020,
-  summary_var = "B15003_001"
+  variables = c(population = "B01003_001"),
+  year = 2019,
+  survey = "acs1"
+)
+
+population_2023 <- get_acs(
+  geography = "state",
+  variables = c(population = "B01003_001"),
+  year = 2023,
+  survey = "acs1"
 )
 ```
 
 ```{r}
-edu_state |>
-  group_by(GEOID, NAME) |>
-  summarize(
-    pct_bachelors_plus = sum(estimate) / first(summary_est) * 100,
-    .groups = "drop"
+population_change <- population_2019 |>
+  select(GEOID, NAME, population_2019 = estimate) |>
+  inner_join(
+    population_2023 |>
+      select(GEOID, population_2023 = estimate),
+    by = "GEOID"
   ) |>
+  mutate(
+    percent_change = (population_2023 - population_2019) /
+      population_2019 * 100
+  )
+
+population_change |>
   ggplot(aes(
-    x = pct_bachelors_plus,
-    y = fct_reorder(NAME, pct_bachelors_plus)
+    x = percent_change,
+    y = fct_reorder(NAME, percent_change)
   )) +
-  geom_col() +
+  geom_col(fill = "#2C7FB8") +
+  geom_vline(xintercept = 0, linewidth = 0.5) +
   scale_x_continuous(labels = \(x) paste0(x, "%")) +
   labs(
-    title = "Adults with a Bachelor's Degree or Higher by State",
-    x = "Adults with a bachelor's degree or higher",
+    title = "Population Growth by State, 2019 to 2023",
+    x = "Population change",
     y = NULL,
-    caption = "Source: U.S. Census Bureau, 2020 ACS 5-year estimates."
+    caption = "Source: U.S. Census Bureau, 2019 and 2023 ACS 1-year estimates."
   ) +
   theme_minimal()
 ```
 
+## Median household income by state
+
+This chart shows median household income across states in 2023.
+
 ```{r}
 #| message: false
-age_ca <- get_acs(
-  geography = "county",
-  variables = c(
-    median_age = "B01002_001",
-    population = "B01003_001"
-  ),
-  state = "CA",
-  year = 2020,
-  geometry = FALSE
+#| cache: true
+# Fetch 2023 median household income (B19013_001) for each state
+income_2023 <- get_acs(
+  geography = "state",
+  variables = c(median_income = "B19013_001"),
+  year = 2023,
+  survey = "acs1"
 )
 ```
 
 ```{r}
-age_ca |>
-  select(GEOID, NAME, variable, estimate) |>
-  pivot_wider(names_from = variable, values_from = estimate) |>
-  ggplot(aes(x = population, y = median_age)) +
-  geom_point() +
-  geom_text(
-    data = \(data) slice_max(data, population, n = 5),
-    aes(label = NAME),
-    check_overlap = TRUE,
-    nudge_y = 0.5
-  ) +
-  scale_x_log10() +
+income_2023 |>
+  ggplot(aes(
+    x = estimate,
+    # Reorder state names from lowest to highest income
+    y = fct_reorder(NAME, estimate)
+  )) +
+  geom_col(fill = "#41AB5D") +
+  # Format the x-axis numbers as dollar amounts
+  scale_x_continuous(labels = scales::label_dollar()) +
   labs(
-    title = "County Population and Median Age in California",
-    x = "County population (log scale)",
-    y = "Median age (years)",
-    caption = "Source: U.S. Census Bureau, 2020 ACS 5-year estimates."
+    title = "Median Household Income by State, 2023",
+    x = "Median household income",
+    y = NULL,
+    caption = "Source: U.S. Census Bureau, 2023 ACS 1-year estimates."
   ) +
   theme_minimal()
 ```
+
+## Population growth and median household income
+
+This chart compares each state's population change (2019–2023) with its 2023 median household income to explore how population growth relates to economic prosperity.
+
+```{r}
+#| message: false
+# Join population change and 2023 median income for each state
+growth_and_income <- population_change |>
+  inner_join(
+    income_2023 |>
+      select(GEOID, median_income = estimate),
+    by = "GEOID"
+  )
+
+growth_and_income |>
+  ggplot(aes(x = percent_change, y = median_income)) +
+  geom_point(color = "#2C7FB8", size = 2.5, alpha = 0.8) +
+  # Add a linear trend line to show the overall relationship
+  geom_smooth(method = "lm", se = FALSE, color = "#253494", linetype = "dashed") +
+  scale_x_continuous(labels = \(x) paste0(x, "%")) +
+  scale_y_continuous(labels = scales::label_dollar()) +
+  labs(
+    title = "State Population Growth vs. Median Household Income",
+    subtitle = "Comparing 2019–2023 population change with 2023 median household income",
+    x = "Population change (2019 to 2023)",
+    y = "Median household income (2023)",
+    caption = "Source: U.S. Census Bureau, 2019 and 2023 ACS 1-year estimates."
+  ) +
+  theme_minimal()
+```
+
+
