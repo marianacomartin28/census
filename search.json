@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Analyzing US Census Data",
+    "section": "",
+    "text": "This chart compares state populations in 2019 and 2023 and calculates the percent change over that period."
+  },
+  {
+    "objectID": "analysis.html#population-growth-by-state",
+    "href": "analysis.html#population-growth-by-state",
+    "title": "Analyzing US Census Data",
+    "section": "",
+    "text": "This chart compares state populations in 2019 and 2023 and calculates the percent change over that period."
+  },
+  {
+    "objectID": "analysis.html#median-household-income-by-state",
+    "href": "analysis.html#median-household-income-by-state",
+    "title": "Analyzing US Census Data",
+    "section": "Median household income by state",
+    "text": "Median household income by state\nThis chart shows median household income across states in 2023."
+  },
+  {
+    "objectID": "analysis.html#population-growth-and-median-household-income",
+    "href": "analysis.html#population-growth-and-median-household-income",
+    "title": "Analyzing US Census Data",
+    "section": "Population growth and median household income",
+    "text": "Population growth and median household income\nThis chart compares each state’s population change (2019–2023) with its 2023 median household income to explore how population growth relates to economic prosperity."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About This Project",
+    "section": "",
+    "text": "This project examines population growth and economic development using data from the U.S. Census Bureau.\nMost of the charts use data from the American Community Survey, which estimates population, income, education, and other characteristics across the United States.\nData source: U.S. Census Bureau"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Population Growth and Economic Development",
+    "section": "",
+    "text": "U.S. Economic Landscape Across States\n\n\nThis website uses data from the U.S. Census Bureau to explore population growth and economic development across the United States.\n\n\n\nWhich states have grown fastest?\nHow do states differ in median household income?\nHow might population change be related to economic opportunity?\n\nVisit the Analysis page to see charts based on American Community Survey data."
+  },
+  {
+    "objectID": "index.html#exploring-how-population-and-prosperity-change-together",
+    "href": "index.html#exploring-how-population-and-prosperity-change-together",
+    "title": "Population Growth and Economic Development",
+    "section": "",
+    "text": "U.S. Economic Landscape Across States\n\n\nThis website uses data from the U.S. Census Bureau to explore population growth and economic development across the United States.\n\n\n\nWhich states have grown fastest?\nHow do states differ in median household income?\nHow might population change be related to economic opportunity?\n\nVisit the Analysis page to see charts based on American Community Survey data."
+  }
+]
