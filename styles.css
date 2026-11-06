@@ -1,1 +1,29 @@
-/* css styles */
+/* Crazy vibrant website styles */
+body {
+  background: linear-gradient(135deg, #fff0f6 0%, #f3f0ff 50%, #e3fafc 100%);
+  color: #2b0938;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #ff007f, #7928ca, #00d4ff, #00ff87) !important;
+  box-shadow: 0 4px 15px rgba(255, 0, 127, 0.35);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+h1, h2, h3 {
+  background: linear-gradient(90deg, #ff007f, #7928ca, #00b4d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+img {
+  border-radius: 12px;
+  border: 3px solid #ff007f;
+  box-shadow: 0 6px 20px rgba(121, 40, 202, 0.25);
+}

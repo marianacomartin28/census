@@ -4,28 +4,35 @@
     "href": "analysis.html",
     "title": "Analyzing US Census Data",
     "section": "",
-    "text": "This chart compares state populations in 2019 and 2023 and calculates the percent change over that period."
+    "text": "This chart compares state populations in 2019 and 2023 and calculates the percent change over that period.\n\n\n\n\n\n\n\n\n\nKey Takeaways:\n\nMountain West & South boom: Idaho (+9.9%), Utah (+6.6%), Montana (+6.0%), Delaware (+6.0%), and Florida (+5.3%) grew the fastest between 2019 and 2023.\nPopulation declines: Washington, D.C. (-3.8%), Louisiana (-1.6%), and California (-1.4%) saw the largest percentage drops over the same period."
   },
   {
     "objectID": "analysis.html#population-growth-by-state",
     "href": "analysis.html#population-growth-by-state",
     "title": "Analyzing US Census Data",
     "section": "",
-    "text": "This chart compares state populations in 2019 and 2023 and calculates the percent change over that period."
+    "text": "This chart compares state populations in 2019 and 2023 and calculates the percent change over that period.\n\n\n\n\n\n\n\n\n\nKey Takeaways:\n\nMountain West & South boom: Idaho (+9.9%), Utah (+6.6%), Montana (+6.0%), Delaware (+6.0%), and Florida (+5.3%) grew the fastest between 2019 and 2023.\nPopulation declines: Washington, D.C. (-3.8%), Louisiana (-1.6%), and California (-1.4%) saw the largest percentage drops over the same period."
   },
   {
     "objectID": "analysis.html#median-household-income-by-state",
     "href": "analysis.html#median-household-income-by-state",
     "title": "Analyzing US Census Data",
     "section": "Median household income by state",
-    "text": "Median household income by state\nThis chart shows median household income across states in 2023."
+    "text": "Median household income by state\nThis chart shows median household income across states in 2023.\n\n\n\n\n\n\n\n\n\nKey Takeaways:\n\nTop earners: Washington, D.C. ($108,210), Massachusetts ($99,858), New Jersey ($99,781), and Maryland ($98,678) lead in median household income.\nWide gap: There is nearly a $55,000 gap between the highest-income state (Massachusetts) and the lowest-income state (Mississippi at $54,203)."
   },
   {
     "objectID": "analysis.html#population-growth-and-median-household-income",
     "href": "analysis.html#population-growth-and-median-household-income",
     "title": "Analyzing US Census Data",
     "section": "Population growth and median household income",
-    "text": "Population growth and median household income\nThis chart compares each state’s population change (2019–2023) with its 2023 median household income to explore how population growth relates to economic prosperity."
+    "text": "Population growth and median household income\nThis chart compares each state’s population change (2019–2023) with its 2023 median household income to explore how population growth relates to economic prosperity.\n\n\n\n\n\n\n\n\n\nKey Takeaways:\n\nPositive but modest relationship: The upward-sloping dashed trend line shows that states with higher median household incomes tend to have slightly higher population growth overall.\nCost of living matters: Some of the fastest-growing states (like Idaho, Montana, and Florida) have middle-tier incomes, suggesting that lower housing costs and remote-work migration played a major role alongside wages."
+  },
+  {
+    "objectID": "analysis.html#fastest-growing-u.s.-counties",
+    "href": "analysis.html#fastest-growing-u.s.-counties",
+    "title": "Analyzing US Census Data",
+    "section": "Fastest-growing U.S. counties",
+    "text": "Fastest-growing U.S. counties\nThis chart downloads county-level population estimates from the 2019 and 2023 5-year ACS and highlights the 15 fastest-growing counties (among counties with at least 10,000 residents).\n\n\n\n\n\n\n\n\n\nCounty Growth Facts:\n\n#1 Fastest-Growing County: Madison County, Idaho surged by 37.0% (growing from 39,100 to 53,578 residents).\nTexas Suburban Boom: Five of the top 10 fastest-growing counties in the nation are in Texas—led by Kaufman County (+29.8%), Comal County (+23.2%), Bastrop County (+21.1%), Rockwall County (+20.3%), and Hays County (+20.2%).\nMost New Residents Overall: Maricopa County, Arizona (Phoenix area) added the most people in total (+163,177 residents), followed by Collin County, Texas (+142,624) and Harris County, Texas (+111,949)."
   },
   {
     "objectID": "about.html",
@@ -39,13 +46,13 @@
     "href": "index.html",
     "title": "Population Growth and Economic Development",
     "section": "",
-    "text": "U.S. Economic Landscape Across States\n\n\nThis website uses data from the U.S. Census Bureau to explore population growth and economic development across the United States.\n\n\n\nWhich states have grown fastest?\nHow do states differ in median household income?\nHow might population change be related to economic opportunity?\n\nVisit the Analysis page to see charts based on American Community Survey data."
+    "text": "U.S. Economic Landscape Across States\n\n\nThis website uses data from the U.S. Census Bureau to explore population growth and economic development across the United States.\n\n\n\nWhich states have grown fastest?\nHow do states differ in median household income?\nHow might population change be related to economic opportunity?\n\n\n\n\n\nFastest-Growing State: Idaho led the nation with nearly 10% population growth (followed by Utah at 6.6% and Montana at 6.0%).\nFastest-Growing Counties: Madison County, Idaho (+37.0%) and Kaufman County, Texas (+29.8%) topped all U.S. counties in percentage growth, while Maricopa County, Arizona added the most new residents (+163,177).\nHighest Median Income: Washington, D.C. ($108,210), Massachusetts ($99,858), and New Jersey ($99,781) had the highest median household incomes in 2023.\nSurprising Trend: Higher income doesn’t always mean faster growth—many fast-growing states in the Mountain West and South have moderate median incomes but lower costs of living.\n\nVisit the Analysis page to see charts based on American Community Survey data."
   },
   {
     "objectID": "index.html#exploring-how-population-and-prosperity-change-together",
     "href": "index.html#exploring-how-population-and-prosperity-change-together",
     "title": "Population Growth and Economic Development",
     "section": "",
-    "text": "U.S. Economic Landscape Across States\n\n\nThis website uses data from the U.S. Census Bureau to explore population growth and economic development across the United States.\n\n\n\nWhich states have grown fastest?\nHow do states differ in median household income?\nHow might population change be related to economic opportunity?\n\nVisit the Analysis page to see charts based on American Community Survey data."
+    "text": "U.S. Economic Landscape Across States\n\n\nThis website uses data from the U.S. Census Bureau to explore population growth and economic development across the United States.\n\n\n\nWhich states have grown fastest?\nHow do states differ in median household income?\nHow might population change be related to economic opportunity?\n\n\n\n\n\nFastest-Growing State: Idaho led the nation with nearly 10% population growth (followed by Utah at 6.6% and Montana at 6.0%).\nFastest-Growing Counties: Madison County, Idaho (+37.0%) and Kaufman County, Texas (+29.8%) topped all U.S. counties in percentage growth, while Maricopa County, Arizona added the most new residents (+163,177).\nHighest Median Income: Washington, D.C. ($108,210), Massachusetts ($99,858), and New Jersey ($99,781) had the highest median household incomes in 2023.\nSurprising Trend: Higher income doesn’t always mean faster growth—many fast-growing states in the Mountain West and South have moderate median incomes but lower costs of living.\n\nVisit the Analysis page to see charts based on American Community Survey data."
   }
 ]
